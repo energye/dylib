@@ -1,3 +1,5 @@
+## clone 自 github.com/ying32/dylib
+
 *通用的跨平台动态连接库调用, 支持 dll、so、dylib。 Move from: github.com/ying32/govcl/vcl/dylib*  
 
 *Universal cross-platform dynamic link library call, support dll, so, dylib. Move from: github.com/ying32/govcl/vcl/dylib*   
@@ -13,7 +15,7 @@ Window下使用syscall.NewLazyDLL加载dll，linux与macOS下使用dlopen加载�
 
 ```go
 
-import "github.com/ying32/dylib"
+import "github.com/energye/dylib"
 
 var (
     lib = dylib.NewLazyDLL("xxx.dll") // 或者 dylib.NewLazyDLL("xxx.so") 或者 dylib.NewLazyDLL("xxx.dylib")
@@ -36,7 +38,7 @@ func Func2() float32 {
 }
 
 // 如果是外部的共享库返回float32或者float64则另使用补丁方式，暂时不支持arm
-// import "github.com/ying32/dylib/floatpatch"
+// import "github.com/energye/dylib/floatpatch"
 // float32
 func Func2() float32 {
     _Func2.Call()  

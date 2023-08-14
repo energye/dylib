@@ -3,7 +3,7 @@ package floatpatch
 import (
 	"testing"
 
-	"github.com/ying32/dylib"
+	"github.com/energye/dylib"
 )
 
 var (
